@@ -1,7 +1,11 @@
 import React from "react";
 
-const HomePageLatout = () => {
-  return <section>HomePageLatout</section>;
+const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <main>
+      {children}
+    </main>
+  );
 };
 
-export default HomePageLatout;
+export default HomePageLayout;
