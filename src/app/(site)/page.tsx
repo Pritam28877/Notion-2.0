@@ -6,6 +6,7 @@ import Banner from "../../../public/appBanner.png";
 import Cal from "../../../public/cal.png";
 import CustomCard from "@/components/landing-page/custom-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from "@/lib/constants";
 import { randomUUID } from "crypto";
 import { twMerge } from "tailwind-merge";
@@ -218,10 +219,10 @@ const HomePage = () => {
                   dark:from-border dark:to-background"
                   cardHeader={
                     <div
-                      className="flex
-                      items-center
-                      gap-4
-                  "
+                    className="flex
+                    items-center
+                    gap-4
+                "
                     >
                       <Avatar>
                         <AvatarImage src={`/avatars/${index + 1}.png`} />
