@@ -88,15 +88,16 @@ const HomePage = () => {
           before:absolute
         "
         >
-          {[...Array(2)].map((arr) => (
+          {[...Array(2)].map((arr,i) => (
             <div
-              key={arr}
+              key={i}
               className="flex
                 flex-nowrap
                 animate-slide
           "
             >
               {CLIENTS.map((client) => (
+                
                 <div
                   key={client.alt}
                   className=" relative
