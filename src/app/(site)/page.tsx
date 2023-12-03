@@ -14,6 +14,7 @@ import clsx from "clsx";
 const HomePage = () => {
   return (
     <>
+      {/* the head title and  status section of the hero page  */}
       <section className="overflow-hidden px-4 sm:px-6 mt-10 sm:flex sm:flex-col gap-4 md:justify-center md:items-center ">
         <TitleSection
           pill="✨ Your Workspace, Perfected"
@@ -64,6 +65,7 @@ const HomePage = () => {
           ></div>
         </div>
       </section>
+      {/* the sponcer section of the hero page with animation */}
       <section className="relative">
         <div
           className="overflow-hidden
@@ -124,6 +126,7 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+      {/* the calander section of the hero page */}
       <section
         className="px-4
         sm:px-6
@@ -167,6 +170,7 @@ const HomePage = () => {
           <Image src={Cal} alt="Banner" className="rounded-2xl" />
         </div>
       </section>
+      {/* the trusted by all section of the hero page */}
       <section className="relative">
         <div
           className="w-full
@@ -219,7 +223,7 @@ const HomePage = () => {
                   dark:from-border dark:to-background"
                   cardHeader={
                     <div
-                    className="flex
+                      className="flex
                     items-center
                     gap-4
                 "
@@ -237,6 +241,11 @@ const HomePage = () => {
                         </CardDescription>
                       </div>
                     </div>
+                  }
+                  cardContent={
+                    <p className="dark:text-washed-purple-800">
+                      {testimonial.message}
+                    </p>
                   }
                 ></CustomCard>
               ))}
