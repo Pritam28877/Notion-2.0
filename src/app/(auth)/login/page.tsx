@@ -17,6 +17,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/cypresslogo.svg";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import Loader from "@/components/global/loading";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -76,7 +78,35 @@ const LoginPage = () => {
               </FormControl>
             </FormItem>
           )}
-        ></FormField>
+        />
+        <FormField
+          disabled={isLoading}
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input type="password" placeholder="Password" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {submitError && <FormMessage>{submitError}</FormMessage>}
+        <Button
+          type="submit"
+          className="w-full p-6"
+          size="lg"
+          disabled={isLoading}
+        >
+          {!isLoading ? "Login" : <Loader />}
+        </Button>
+        <span className="self-container">
+          Dont have an account?{" "}
+          <Link href="/signup" className="text-primary">
+            Sign Up
+          </Link>
+        </span>
       </form>
     </Form>
   );
