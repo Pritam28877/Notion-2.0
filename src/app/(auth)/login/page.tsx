@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/cypresslogo.svg";
+import { Input } from "@/components/ui/input";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -58,6 +59,24 @@ const LoginPage = () => {
             cypress.
           </span>
         </Link>
+        <FormDescription
+          className="
+         text-foreground/60"
+        >
+          An all-In-One Collaboration and Productivity Platform
+        </FormDescription>
+        <FormField
+          disabled={isLoading}
+          control={form.control}
+          name="email"
+          render={(field) => (
+            <FormItem>
+              <FormControl>
+                <Input type="email" placeholder="Email" {...field}></Input>
+              </FormControl>
+            </FormItem>
+          )}
+        ></FormField>
       </form>
     </Form>
   );
