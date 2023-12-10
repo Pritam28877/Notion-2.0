@@ -49,7 +49,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 const Header = () => {
-  const [path, setPath] = useState("");
+  const [path, setPath] = useState("#products");
   return (
     <>
       <header
